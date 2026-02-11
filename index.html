@@ -229,6 +229,39 @@
             font-size: 0.9rem;
         }
 
+        /* Gallery */
+        .gallery {
+            padding: 50px 20px;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--sage-dark);
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
         /* Mobile */
         @media (max-width: 600px) {
             .hero h1 {
@@ -241,6 +274,11 @@
 
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
             }
         }
     </style>
@@ -297,6 +335,17 @@
             <div class="special-box">
                 <h2>🌟 Special Needs Experience</h2>
                 <p>I have extensive experience caring for dogs with special needs — whether that's anxiety, mobility challenges, medical conditions, or senior pups who need a gentler pace. Your dog's comfort and safety always come first.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2>Our Furry Friends 🐾</h2>
+            <div class="gallery-grid">
+                <img src="images/lagotto-1.png" alt="Happy Lagotto Romagnolo in the park">
+                <img src="images/lagotto-2.png" alt="Cute Lagotto Romagnolo puppy">
+                <img src="images/lagotto-3.png" alt="Lagotto Romagnolo on a walk">
             </div>
         </div>
     </section>
