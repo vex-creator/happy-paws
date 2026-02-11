@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Paws | Dog Walking in Reservoir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #faf6f0;
+            --sage: #87a878;
+            --sage-dark: #6b8f5c;
+            --earth: #8b7355;
+            --earth-light: #a69076;
+            --charcoal: #3d3d3d;
+            --warm-white: #fffdf9;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(180deg, var(--warm-white) 0%, var(--cream) 100%);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--sage-dark);
+            margin-bottom: 10px;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: var(--earth);
+            margin-bottom: 5px;
+        }
+
+        .hero .location {
+            font-size: 1rem;
+            color: var(--earth-light);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--sage);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(135, 168, 120, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(135, 168, 120, 0.4);
+        }
+
+        /* About */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 1.8rem;
+            color: var(--sage-dark);
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 15px;
+            color: var(--charcoal);
+        }
+
+        /* Services */
+        .services {
+            padding: 50px 20px;
+            background: var(--warm-white);
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--sage-dark);
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .service-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--sage-dark);
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--earth);
+        }
+
+        /* Special Needs */
+        .special {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .special-box {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .special-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .special-box p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+            background: var(--warm-white);
+        }
+
+        .contact h2 {
+            font-size: 1.8rem;
+            color: var(--sage-dark);
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: var(--charcoal);
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .contact-methods a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--sage-dark);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 12px 25px;
+            background: var(--cream);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-methods a:hover {
+            background: var(--sage);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--earth-light);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="logo">🐕</div>
+            <h1>Happy Paws</h1>
+            <p class="tagline">Caring dog walking for your best friend</p>
+            <p class="location">📍 Reservoir & surrounding suburbs</p>
+            <a href="#contact" class="cta-button">Book a Walk</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Hey, I'm Jordan! 👋</h2>
+            <p>I'm a passionate dog lover offering friendly, reliable dog walking services in the Reservoir area.</p>
+            <p>Every pup deserves personalised attention and care — whether it's a leisurely stroll around the block or an adventure at the local park.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🦮</div>
+                    <h3>Daily Walks</h3>
+                    <p>Regular walks tailored to your dog's energy level and needs</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏃</div>
+                    <h3>Adventure Walks</h3>
+                    <p>Longer outings with exploration and off-leash play time</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏠</div>
+                    <h3>Drop-in Visits</h3>
+                    <p>Check-ins for feeding, play time, and company</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💊</div>
+                    <h3>Medication Support</h3>
+                    <p>Happy to administer medication during visits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="special">
+        <div class="container">
+            <div class="special-box">
+                <h2>🌟 Special Needs Experience</h2>
+                <p>I have extensive experience caring for dogs with special needs — whether that's anxiety, mobility challenges, medical conditions, or senior pups who need a gentler pace. Your dog's comfort and safety always come first.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Ready to book a walk or have questions? Reach out anytime!</p>
+            <div class="contact-methods">
+                <a href="tel:0400000000">📞 Call or Text</a>
+                <a href="mailto:hello@happypaws.com">✉️ Email Me</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Happy Paws · Reservoir, Melbourne</p>
+        </div>
+    </footer>
+</body>
+</html>
